@@ -19,7 +19,7 @@ internal class OverloadsTest {
         assertAll("Overloads called from Kotlin",
             { println(Product("Name", 5.0, "Desc")) },
             { println(Product("Name", 5.0)) },
-            { println(Product("Name")) }
+            { println(Product("Name").also { t->println( "----------------------$t.firstProperty") }) }
         )
     }
 }
