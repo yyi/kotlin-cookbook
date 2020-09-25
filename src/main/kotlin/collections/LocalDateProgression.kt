@@ -5,7 +5,7 @@ import java.time.LocalDate
 class LocalDateProgression(
     override val start: LocalDate,
     override val endInclusive: LocalDate,
-    val step: Long = 1
+    private val step: Long = 1
 ) : Iterable<LocalDate>, ClosedRange<LocalDate> {
 
     override fun iterator(): Iterator<LocalDate> = LocalDateProgressionIterator(start, endInclusive, step)
@@ -15,8 +15,8 @@ class LocalDateProgression(
 
 internal class LocalDateProgressionIterator(
     start: LocalDate,
-    val endInclusive: LocalDate,
-    val step: Long
+    private val endInclusive: LocalDate,
+    private val step: Long
 ) : Iterator<LocalDate> {
 
     private var current = start

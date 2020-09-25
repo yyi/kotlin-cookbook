@@ -37,6 +37,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.9")
     testImplementation(kotlin("test-junit5"))
+    testImplementation("org.junit.platform:junit-platform-launcher:1.6.2")
+    testImplementation("org.junit.platform:junit-platform-engine:1.6.0")
 
     implementation(kotlin("script-runtime"))
 }
